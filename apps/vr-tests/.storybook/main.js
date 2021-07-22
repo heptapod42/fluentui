@@ -8,6 +8,15 @@ module.exports = {
     // disable react-docgen-typescript (totally not needed here, slows things down a lot)
     reactDocgen: false,
   },
-  webpackFinal: config => custom(config),
+  webpackFinal: config => {
+    const finalConfig = custom(config);
+
+    finalConfig.module.rules.unshift({
+      test: /\.(ts|tsx)$/,
+      use: [{ loader: '@fluentui/make-styles-webpack-loader' }],
+    });
+
+    return finalConfig;
+  },
   addons: ['@storybook/addon-actions'],
 };
