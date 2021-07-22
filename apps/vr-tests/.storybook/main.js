@@ -1,4 +1,6 @@
 // your app's webpack.config.js
+const path = require('path');
+const { TsconfigPathsPlugin } = require('tsconfig-paths-webpack-plugin');
 const custom = require('@fluentui/scripts/storybook/webpack.config');
 
 module.exports = {
@@ -9,6 +11,16 @@ module.exports = {
     reactDocgen: false,
   },
   webpackFinal: config => {
+    const tsPaths = new TsconfigPathsPlugin({
+      configFile: path.resolve(__dirname, '../../../tsconfig.base.json'),
+    });
+
+    if (config.resolve) {
+      config.resolve.plugins
+        ? config.resolve.plugins.push(tsPaths)
+        : (config.resolve.plugins = [tsPaths]);
+    }
+
     const finalConfig = custom(config);
 
     finalConfig.module.rules.unshift({
