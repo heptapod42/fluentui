@@ -2744,10 +2744,10 @@
   dependencies:
     "@linaria/babel-preset" "^3.0.0-beta.7"
 
-"@linaria/shaker@^3.0.0-beta.9":
-  version "3.0.0-beta.9"
-  resolved "https://registry.yarnpkg.com/@linaria/shaker/-/shaker-3.0.0-beta.9.tgz#3a197d4301e1061e67cda3b5eab994305d26ba01"
-  integrity sha512-1dFR7LvgITYMofEEuvDPml4VMSD87aynd+enXDWv80rZn04fCzJamKFHG5dB5Heq8k8Ny+O8H1/j1PWNTEYjJw==
+"@linaria/shaker@^3.0.0-beta.10":
+  version "3.0.0-beta.10"
+  resolved "https://registry.yarnpkg.com/@linaria/shaker/-/shaker-3.0.0-beta.10.tgz#1cde37f0baed129b5004326d5e4405440c6d4f50"
+  integrity sha512-+k5CME4XFppb7ZkCzzvpepAwvrxoaB0cFIsHM6bhhcriI4921++35IJVsjMJWobP57JBb6hWkr+q2ISypgQETQ==
   dependencies:
     "@babel/generator" ">=7"
     "@babel/plugin-transform-runtime" ">=7"
